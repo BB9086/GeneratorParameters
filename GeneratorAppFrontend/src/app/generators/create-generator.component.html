@@ -1,0 +1,88 @@
+<form #generatorForm="ngForm" (ngSubmit)="saveGeneratorr(generator)">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{panelTitle}}</h3>
+        </div>
+
+        <div class="panel-body">
+            <div class="form-group" [class.has-error]="name.invalid && name.touched" [class.has-success]="name.valid">
+                <label for="name" class="control-label">Full Name</label>
+                <input required id="name" name="name" [(ngModel)]="generator.name" #name="ngModel" type="text"
+                    class="form-control" />
+                <span class="help-block" *ngIf="name.invalid && name.touched">Name is required!</span>
+            </div>
+            <div class="form-group" [class.has-error]="apparentPower.invalid && apparentPower.touched"
+                [class.has-success]="apparentPower.valid">
+                <label for="apparentPower" class="control-label">Apparent Power</label>
+                <input required id="apparentPower" name="apparentPower" [(ngModel)]="generator.apparentPower_MVA"
+                    #apparentPower="ngModel" type="text" class="form-control" />
+                <span class="help-block" *ngIf="apparentPower.invalid && apparentPower.touched">Apparent power is
+                    required!</span>
+            </div>
+            <div class="form-group" [class.has-error]="activePower.invalid && activePower.touched"
+                [class.has-success]="activePower.valid">
+                <label for="activePower" class="control-label">Active Power</label>
+                <input required id="activePower" name="activePower" [(ngModel)]="generator.activePower_MW"
+                    #activePower="ngModel" type="text" class="form-control" />
+                <span class="help-block" *ngIf="activePower.invalid && activePower.touched">Active power is
+                    required!</span>
+            </div>
+            <div class="form-group" [class.has-error]="powerFactor.invalid && powerFactor.touched"
+                [class.has-success]="powerFactor.valid">
+                <label for="powerFactor" class="control-label">Power Factor</label>
+                <input required id="powerFactor" name="powerFactor" [(ngModel)]="generator.powerFactor"
+                    #powerFactor="ngModel" type="text" class="form-control" />
+                <span class="help-block" *ngIf="powerFactor.invalid && powerFactor.touched">Power factor is
+                    required!</span>
+            </div>
+
+            <div class="form-group" [class.has-error]="producer.invalid && producer.touched"
+                [class.has-success]="producer.valid">
+                <label for="producer" class="control-label">Producer</label>
+                <input required id="producer" name="producer" [(ngModel)]="generator.producer" #producer="ngModel"
+                    type="text" class="form-control" />
+                <span class="help-block" *ngIf="producer.invalid && producer.touched">Producer is required!</span>
+            </div>
+
+            <div class="form-group" [class.has-error]="productionYear.invalid && productionYear.touched"
+                [class.has-success]="productionYear.valid">
+                <label for="productionYear" class="control-label">Production Year</label>
+                <input required id="productionYear" name="productionYear" [(ngModel)]="generator.productionYear"
+                    #productionYear="ngModel" type="text" class="form-control" />
+                <span class="help-block" *ngIf="productionYear.invalid && productionYear.touched">Production year is
+                    required!</span>
+            </div>
+
+
+            <div class="form-group" [class.has-error]="location.invalid && location.touched"
+                [class.has-success]="location.valid">
+                <label for="location" class="control-label">Location</label>
+                <input required id="location" name="location" [(ngModel)]="generator.location" #location="ngModel"
+                    type="text" class="form-control" />
+                <span class="help-block" *ngIf="location.invalid && location.touched">Location is required!</span>
+            </div>
+
+
+            <div class="form-group">
+                <label for="photoPath">Photo Path</label>
+                <input id="photoPath" name="photoPath" type="text" [(ngModel)]="generator.photoPath"
+                    class="form-control" #photoPath="ngModel" />
+            </div>
+            <div class="form-group">
+                <img [src]="generator.photoPath" height="200" width="200"
+                    *ngIf="photoPreview && generator.photoPath !=='' && generator.photoPath !== null" />
+            </div>
+            <div class="form-group">
+                <button type="button" (click)="togglePreview()" class="btn btn-primary"
+                    *ngIf="generator.photoPath !='' && generator.photoPath != null">
+                    {{photoPreview? "Hide": "Show"}} Preview
+                </button>
+            </div>
+
+        </div>
+        <div class="panel-footer">
+            <button type="submit" class="btn btn-primary" [disabled]="generatorForm.invalid">Save</button>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\inetpub\wwwroot\generatorApiPublish</_PublishTargetUrl>
+    <History>False|2022-12-05T12:09:57.1135473Z;True|2022-12-05T13:08:10.7743366+01:00;False|2022-12-05T13:07:38.5380154+01:00;False|2022-12-05T13:06:46.0563770+01:00;True|2022-12-05T12:57:57.7933924+01:00;True|2022-12-05T12:53:07.0043232+01:00;True|2022-12-05T12:41:25.6335056+01:00;False|2022-12-05T12:41:02.7805537+01:00;False|2022-12-05T12:40:00.9359590+01:00;True|2022-12-05T12:36:42.0442826+01:00;True|2022-12-05T12:36:02.6797634+01:00;True|2022-12-05T12:33:20.9356980+01:00;False|2022-12-05T12:32:11.8007084+01:00;False|2022-12-05T12:30:38.1532282+01:00;True|2022-12-05T12:25:57.5092288+01:00;True|2022-12-05T12:21:33.2079572+01:00;True|2022-12-05T12:15:54.1801749+01:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="GeneratorConnection">
+      <Value>Server=.%3bDatabase=AngularGeneratorDB%3b Trusted_Connection=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Api_GeneratorAngularApp.Data.GeneratorContext">
+      <Value>Server=.%3bDatabase=AngularGeneratorDB%3b Trusted_Connection=True%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

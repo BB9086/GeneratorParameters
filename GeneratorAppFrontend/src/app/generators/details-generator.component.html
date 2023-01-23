@@ -1,0 +1,220 @@
+<div class="panel panel-primary" *ngIf="currentGenerator">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{currentGenerator.name}}</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="col-xs-10" *ngIf="!isMobileResolution && !isMiniMobileResolution">
+
+            <div class="row vertical-align">
+
+                <div  class="col-xs-4">
+                    <img class="imageClass" [src]="currentGenerator.photoPath" />
+                </div>
+                <div class="col-xs-8">
+
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <b>Apparent Power:</b> {{currentGenerator.apparentPower_MVA}}
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <b>Active Power (MW):</b> {{currentGenerator.activePower_MW}}
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <b>Power factor:</b>  {{currentGenerator.powerFactor}}
+                        </div>
+                        <div class="col-xs-4">
+                           
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <b>Producer:</b> {{currentGenerator.producer}}
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                        <div class="col-xs-4">
+                             
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <b>Production Year:</b>  {{currentGenerator.productionYear}}
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <b>Location:</b> {{currentGenerator.location}}
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                        <div class="col-xs-4">
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- //mobileResolution: -->
+        <div class="col-xs-12" *ngIf="isMobileResolution">
+
+            <div class="row vertical-align">
+
+                <div  class="col-xs-2">
+                    <img class="imageClass" [src]="currentGenerator.photoPath" />
+                </div>
+                <div class="col-xs-10">
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Apparent Power:</b> {{currentGenerator.apparentPower_MVA}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Active Power:</b> {{currentGenerator.activePower_MW}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                           
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Power factor:</b>  {{currentGenerator.powerFactor}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Producer:</b> {{currentGenerator.producer}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                           
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Production Year:</b>  {{currentGenerator.productionYear}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                           
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Location:</b> {{currentGenerator.location}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+          <!-- //mini mobileResolution: -->
+          <div class="col-xs-12" *ngIf="isMiniMobileResolution">
+
+            <div class="row horizontal-align">
+
+                <div  class="col-xs-1">
+                    <img class="imageClass" [src]="currentGenerator.photoPath" />
+                </div>
+                <div class="col-xs-11">
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <b>Apparent Power:</b> {{currentGenerator.apparentPower_MVA}}
+                        </div>
+                        <div class="col-xs-6">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <b>Active Power:</b> {{currentGenerator.activePower_MW}}
+                        </div>
+                        <div class="col-xs-6">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <b>Power factor:</b>  {{currentGenerator.powerFactor}}
+                        </div>
+                        <div class="col-xs-6">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <b>Producer:</b> {{currentGenerator.producer}}
+                        </div>
+                        <div class="col-xs-6">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <b>Production Year:</b>  {{currentGenerator.productionYear}}
+                        </div>
+                        <div class="col-xs-6">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <b>Location:</b> {{currentGenerator.location}}
+                        </div>
+                        <div class="col-xs-6">
+                           
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-primary" [routerLink]="['/list']" [queryParams]="{'id':currentGenerator.id}">Goto
+            List</a>
+        <button class="btn btn-primary pull-right" (click)="GoToNextEmloyee()">
+            View Next Employee
+        </button>
+    </div>
+</div>

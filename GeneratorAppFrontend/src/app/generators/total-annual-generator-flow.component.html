@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th *ngFor="let generator of generators | changeOrder" scope="col">{{generator.name}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td *ngFor="let generator of generators | changeOrder">{{generator.currentStorageVol_cubm}}</td>
+        </tr>
+
+    </tbody>
+</table>
+<br>
+<hr>
+<br>
+
+<button class="btn btn-primary" type="button" (click)="refreshGeneratorList()">Refresh</button>

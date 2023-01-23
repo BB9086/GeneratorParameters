@@ -1,0 +1,9 @@
+
+<div class="fomr-group">
+    <input type="text" class="form-control" placeholder="Search generator by name"
+     style="width: 300px" [(ngModel)]="searchTerm">
+</div>
+<br>
+<div *ngFor="let generator of filteredGeneratorList">
+<app-display-generator [generator]="generator" (notifyDelete)="deleteFromListGenerators($event)"></app-display-generator>
+</div>
